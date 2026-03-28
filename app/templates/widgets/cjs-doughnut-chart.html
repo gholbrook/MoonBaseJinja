@@ -1,0 +1,25 @@
+{% macro cjsDoughnutChart() %}
+<div class="card h-100">
+    <h5 class="card-header">User by Devices</h5>
+    <div class="card-body">
+      <canvas id="cjsDoughnutChart" class="mb-4" data-height="350"></canvas>
+      <ul class="d-flex justify-content-around ps-0 mb-2 pt-1" style="list-style: none;">
+        <li class="d-flex flex-column align-items-center">
+          <h5 class="mb-1">Desktop</h5>
+          <span class="badge rounded-pill" style="width: 35px; height: 6px; background-color: rgb(102, 110, 232);"></span>
+          <div class="text-muted mt-1">80%</div>
+        </li>
+        <li class="d-flex flex-column align-items-center">
+          <h5 class="mb-1">Tablet</h5>
+          <span class="badge rounded-pill" style="width: 35px; height: 6px; background-color: rgb(40, 208, 148);"></span>
+          <div class="text-muted mt-1">10%</div>
+        </li>
+        <li class="d-flex flex-column align-items-center">
+          <h5 class="mb-1">Mobile</h5>
+          <span class="badge rounded-pill" style="width: 35px; height: 6px; background-color: rgb(253, 172, 52);"></span>
+          <div class="text-muted mt-1">10%</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endmacro %}
