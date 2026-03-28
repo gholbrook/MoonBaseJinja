@@ -6,6 +6,7 @@
 {% from "widgets/three-tab-line.html" import threeTabLine %}
 {% from "widgets/table-list-with-icons.html" import tableListWithIcons %}
 {% from "widgets/timeline.html" import timeline %}
+{% from "widgets/three-tab-list-with-bar.html" import threeTabListWithBar %}
 
 {% block page_css %}
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
@@ -98,7 +99,10 @@
         <div class="col-md-12 col-lg-6 order-4 order-lg-3">
             {{ timeline() }}
         </div>
-        <!--/ Transactions -->
+
+        <div class="col-md-12 col-lg-6 order-4 order-lg-3">
+            {{ threeTabListWithBar() }}
+        </div>
       </div>
 {% endblock %}
 
