@@ -1,0 +1,19 @@
+{% macro cjsLineChart() %}
+<div class="card h-100">
+    <div class="card-header d-flex align-items-center justify-content-between">
+      <div>
+        <h5 class="card-title mb-0">Statistics</h5>
+        <small class="text-muted">Commercial networks and enterprises</small>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <h5 class="mb-0">$ 78,000</h5>
+        <span class="badge bg-label-secondary">
+          <i class="bx bx-up-arrow-alt text-success"></i> 37%
+        </span>
+      </div>
+    </div>
+    <div class="card-body pt-2">
+      <canvas id="cjsLineChart" data-height="500"></canvas>
+    </div>
+  </div>
+{% endmacro %}

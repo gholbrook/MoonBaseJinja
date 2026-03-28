@@ -1,0 +1,16 @@
+{% macro cjsBubbleChart() %}
+<div class="card h-100">
+    <div class="card-header d-flex align-items-center justify-content-between">
+      <h5 class="card-title mb-0">Bubble Chart</h5>
+      <div class="d-flex align-items-center gap-2">
+        <h5 class="mb-0">$ 100,000</h5>
+        <span class="badge bg-label-secondary">
+          <i class="bx bx-down-arrow-alt text-danger"></i> 20%
+        </span>
+      </div>
+    </div>
+    <div class="card-body">
+      <canvas id="cjsBubbleChart" data-height="500"></canvas>
+    </div>
+  </div>
+{% endmacro %}

@@ -1,0 +1,31 @@
+{% macro cjsBarChart() %}
+<div class="card h-100">
+    <div class="card-header d-flex align-items-center justify-content-between">
+      <h5 class="card-title mb-0">Latest Statistics</h5>
+      <div class="dropdown">
+        <button
+          class="btn p-0"
+          type="button"
+          id="cjsBarDropdown"
+          data-bs-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <i class="bx bx-calendar"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cjsBarDropdown">
+          <a class="dropdown-item" href="javascript:void(0);">Today</a>
+          <a class="dropdown-item" href="javascript:void(0);">Yesterday</a>
+          <a class="dropdown-item" href="javascript:void(0);">Last 7 Days</a>
+          <a class="dropdown-item" href="javascript:void(0);">Last 30 Days</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="javascript:void(0);">Current Month</a>
+          <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <canvas id="cjsBarChart" data-height="400"></canvas>
+    </div>
+  </div>
+{% endmacro %}

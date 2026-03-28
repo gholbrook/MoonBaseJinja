@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/Users/utahb/PycharmProjects/MoonBaseJinja -name *datatables* -o -name *DataTables*)",
+      "Bash(grep:*)",
+      "WebFetch(domain:demos.themeselection.com)"
+    ]
+  }
+}
