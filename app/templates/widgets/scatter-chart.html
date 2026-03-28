@@ -1,0 +1,20 @@
+{% macro scatterChart() %}
+<div class="card h-100">
+    <div class="card-header d-flex align-items-center justify-content-between pb-0">
+      <div class="card-title mb-0">
+        <h5 class="m-0 me-2">New Technologies Data</h5>
+      </div>
+      <div class="d-none d-sm-flex btn-group" role="group">
+        <input type="radio" class="btn-check" name="scatterRadio" id="scatterDaily" checked />
+        <label class="btn btn-outline-primary btn-sm" for="scatterDaily">Daily</label>
+        <input type="radio" class="btn-check" name="scatterRadio" id="scatterMonthly" />
+        <label class="btn btn-outline-primary btn-sm" for="scatterMonthly">Monthly</label>
+        <input type="radio" class="btn-check" name="scatterRadio" id="scatterYearly" />
+        <label class="btn btn-outline-primary btn-sm" for="scatterYearly">Yearly</label>
+      </div>
+    </div>
+    <div class="card-body">
+      <div id="scatterChart"></div>
+    </div>
+  </div>
+{% endmacro %}
