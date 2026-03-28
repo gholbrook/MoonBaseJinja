@@ -75,6 +75,14 @@
       </a>
     </li>
 
+      <!-- Chats -->
+    <li class="menu-item {{ 'active' if request.url.path == '/chats' else '' }}">
+      <a href="/chats" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-message"></i>
+        <div data-i18n="Analytics">Chats</div>
+      </a>
+    </li>
+
       <!-- Agents -->
     <li class="menu-item {{ 'active' if request.url.path.startswith('/agent') else '' }}">
       <a href="/agents" class="menu-link">
@@ -82,8 +90,6 @@
         <div data-i18n="Analytics">Agents</div>
       </a>
     </li>
-
-
 
     <!-- Misc -->
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Misc</span></li>
