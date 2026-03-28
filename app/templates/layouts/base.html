@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="light-style layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="../assets/"
+  data-template="vertical-menu-template-free"
+>
+{% include "partials/head.html" %}
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+          {% include "partials/sidebar.html" %}
+            <div class="layout-page">
+            {% include "partials/nav.html" %}
+            <div class="content-wrapper">
+            <div class="container-xxl flex-grow-1 container-p-y">
+            {% block content %}{% endblock %}
+            </div>
+            {% include "partials/footer.html" %}
+            <div class="content-backdrop fade"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    {% include "partials/scripts.html" %}
+
+    {% block page_js %}{% endblock %}
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>

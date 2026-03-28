@@ -1,0 +1,19 @@
+<script src="../assets/vendor/libs/jquery/jquery.js"></script>
+<script src="../assets/vendor/libs/popper/popper.js"></script>
+<script src="../assets/vendor/js/bootstrap.js"></script>
+<script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="../assets/vendor/js/menu.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+    async function updateStats() {
+        const res = await fetch('/api/stats');
+        const data = await res.json();
+        document.getElementById('profit-value').textContent = data.profit;
+        document.getElementById('sales-value').textContent = data.sales;
+        document.getElementById('users-value').textContent = data.users;
+        document.getElementById('transactions-value').textContent = data.transactions;
+      }
+
+      setInterval(updateStats, 5000);
+      updateStats();
+</script>
