@@ -6,7 +6,12 @@
       "WebFetch(domain:demos.themeselection.com)",
       "Bash(find C:/Users/utahb/PycharmProjects/MoonBaseJinja/app/static/assets -name *datatable* -o -name *datatables*)",
       "Bash(tr '}' '\\\\n')",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(grep -oP '#[0-9a-fA-F]{3,6}\\\\b' /c/Users/utahb/PycharmProjects/MoonBaseJinja/app/static/assets/vendor/css/core.css)",
+      "Bash(grep -oE '#[0-9a-fA-F]{3,6}' /c/Users/utahb/PycharmProjects/MoonBaseJinja/app/static/assets/vendor/css/core.css)",
+      "Bash(grep -oE '[^}]{0,50}--bs-paper-bg:\\\\s*#2b2c40' /c/Users/utahb/PycharmProjects/MoonBaseJinja/app/static/assets/css/core.css)",
+      "Bash(grep -oE '[^}]{0,200}--bs-paper-bg:\\\\s*#2b2c40' /c/Users/utahb/PycharmProjects/MoonBaseJinja/app/static/assets/css/core.css)",
+      "Bash(grep -oE '[^}]{0,500}--bs-paper-bg:\\\\s*#2b2c40' /c/Users/utahb/PycharmProjects/MoonBaseJinja/app/static/assets/css/core.css)"
     ]
   }
 }
