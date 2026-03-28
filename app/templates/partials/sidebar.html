@@ -76,7 +76,7 @@
     </li>
 
       <!-- Agents -->
-    <li class="menu-item {{ 'active' if request.url.path == '/agents' else '' }}">
+    <li class="menu-item {{ 'active' if request.url.path.startswith('/agent') else '' }}">
       <a href="/agents" class="menu-link">
         <i class="menu-icon tf-icons bx bx-bot"></i>
         <div data-i18n="Analytics">Agents</div>

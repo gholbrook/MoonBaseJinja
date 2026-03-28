@@ -8,6 +8,7 @@
 'use strict';
 
 // JS global variables
+let isDark = document.documentElement.classList.contains('dark-style');
 let config = {
   colors: {
     primary: '#696cff',
@@ -18,10 +19,10 @@ let config = {
     danger: '#ff3e1d',
     dark: '#233446',
     black: '#000',
-    white: '#fff',
-    body: '#f4f5fb',
-    headingColor: '#566a7f',
-    axisColor: '#a1acb8',
-    borderColor: '#eceef1'
+    white: isDark ? '#2b2c40' : '#fff',
+    body: isDark ? '#232333' : '#f4f5fb',
+    headingColor: isDark ? '#d1d2de' : '#566a7f',
+    axisColor: isDark ? '#7c7ea0' : '#a1acb8',
+    borderColor: isDark ? '#434368' : '#eceef1'
   }
 };

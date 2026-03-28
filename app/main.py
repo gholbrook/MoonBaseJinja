@@ -16,9 +16,21 @@ async def charts_apex(request: Request):
 async def charts_apex(request: Request):
     return templates.TemplateResponse(request, "pages/agents.html")
 
-@app.get("/agent/{id}/profile")
-async def agent_profile(request: Request, id: str):
-    return templates.TemplateResponse(request, "pages/agent.html", {"agent_id": id})
+@app.get("/agent/{id}/overview")
+async def agent_overview(request: Request, id: str):
+    return templates.TemplateResponse(request, "pages/agent_overview.html", {"agent_id": id})
+
+@app.get("/agent/{id}/context")
+async def agent_context(request: Request, id: str):
+    return templates.TemplateResponse(request, "pages/agent_context.html", {"agent_id": id})
+
+@app.get("/agent/{id}/activity")
+async def agent_activity(request: Request, id: str):
+    return templates.TemplateResponse(request, "pages/agent_activity.html", {"agent_id": id})
+
+@app.get("/agent/{id}/tools")
+async def agent_tools(request: Request, id: str):
+    return templates.TemplateResponse(request, "pages/agent_tools.html", {"agent_id": id})
 
 
 @app.get("/")

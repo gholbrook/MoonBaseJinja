@@ -32,6 +32,30 @@
 
     {% block page_js %}{% endblock %}
 
+    <script>
+      (function () {
+        const html = document.documentElement;
+        const toggle = document.getElementById('theme-toggle');
+        const icon = document.getElementById('theme-icon');
+        const saved = localStorage.getItem('theme');
+
+        function setTheme(dark) {
+          html.classList.toggle('light-style', !dark);
+          html.classList.toggle('dark-style', dark);
+          icon.classList.toggle('bx-moon', !dark);
+          icon.classList.toggle('bx-sun', dark);
+          localStorage.setItem('theme', dark ? 'dark' : 'light');
+        }
+
+        setTheme(saved === 'dark');
+
+        toggle.addEventListener('click', function () {
+          var nowDark = html.classList.contains('light-style');
+          localStorage.setItem('theme', nowDark ? 'dark' : 'light');
+          location.reload();
+        });
+      })();
+    </script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>
