@@ -8,6 +8,11 @@ app.mount("/assets", StaticFiles(directory="static/assets"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 
+@app.get("/charts-apex")
+async def charts_apex(request: Request):
+    return templates.TemplateResponse(request, "pages/charts-apex.html")
+
+
 @app.get("/")
 async def dashboard(request: Request):
     # This data could come from a database, API, etc.

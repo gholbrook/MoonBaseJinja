@@ -1,0 +1,19 @@
+{% macro balanceLineChart() %}
+<div class="card h-100">
+    <div class="card-header d-flex align-items-center justify-content-between pb-0">
+      <div class="card-title mb-0">
+        <h5 class="m-0 me-2">Balance</h5>
+        <small class="text-muted">Commercial networks & enterprises</small>
+      </div>
+      <div class="d-sm-flex d-none align-items-center gap-2">
+        <h4 class="mb-0">$ 100,000</h4>
+        <span class="badge bg-label-danger rounded-pill">
+          <i class="bx bx-down-arrow-alt"></i> 20%
+        </span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div id="balanceLineChart"></div>
+    </div>
+  </div>
+{% endmacro %}

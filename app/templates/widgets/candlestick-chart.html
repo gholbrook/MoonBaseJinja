@@ -1,0 +1,32 @@
+{% macro candlestickChart() %}
+<div class="card h-100">
+    <div class="card-header d-flex align-items-center justify-content-between pb-0">
+      <div class="card-title mb-0">
+        <h5 class="m-0 me-2">Stocks Prices</h5>
+        <small class="text-muted">$50,863.98</small>
+      </div>
+      <div class="dropdown">
+        <button
+          class="btn btn-sm btn-outline-primary dropdown-toggle"
+          type="button"
+          id="candleDropdown"
+          data-bs-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Today
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="candleDropdown">
+          <a class="dropdown-item" href="javascript:void(0);">Yesterday</a>
+          <a class="dropdown-item" href="javascript:void(0);">Last 7 Days</a>
+          <a class="dropdown-item" href="javascript:void(0);">Last 30 Days</a>
+          <a class="dropdown-item" href="javascript:void(0);">Current Month</a>
+          <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div id="candleStickChart"></div>
+    </div>
+  </div>
+{% endmacro %}

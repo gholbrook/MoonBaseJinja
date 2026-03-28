@@ -1,0 +1,78 @@
+{% extends "layouts/base.html" %}
+{% from "widgets/line-area-chart.html" import lineAreaChart %}
+{% from "widgets/stacked-bar-chart.html" import stackedBarChart %}
+{% from "widgets/scatter-chart.html" import scatterChart %}
+{% from "widgets/balance-line-chart.html" import balanceLineChart %}
+{% from "widgets/horizontal-bar-chart.html" import horizontalBarChart %}
+{% from "widgets/candlestick-chart.html" import candlestickChart %}
+{% from "widgets/heatmap-chart.html" import heatmapChart %}
+{% from "widgets/radial-bar-chart.html" import radialBarChart %}
+{% from "widgets/radar-chart.html" import radarChart %}
+{% from "widgets/donut-chart.html" import donutChart %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
+{% endblock %}
+
+{% block title %}
+    MoonBase - Apex Charts
+{% endblock %}
+
+{% block content %}
+    <div class="row gy-4">
+        <!-- Line Area Chart -->
+        <div class="col-12">
+          {{ lineAreaChart() }}
+        </div>
+
+        <!-- Stacked Bar Chart -->
+        <div class="col-12">
+          {{ stackedBarChart() }}
+        </div>
+
+        <!-- Scatter Chart -->
+        <div class="col-12">
+          {{ scatterChart() }}
+        </div>
+
+        <!-- Balance Line Chart -->
+        <div class="col-12">
+          {{ balanceLineChart() }}
+        </div>
+
+        <!-- Horizontal Bar Chart -->
+        <div class="col-md-6 col-12">
+          {{ horizontalBarChart() }}
+        </div>
+
+        <!-- Candlestick Chart -->
+        <div class="col-md-6 col-12">
+          {{ candlestickChart() }}
+        </div>
+
+        <!-- Heatmap Chart -->
+        <div class="col-md-6 col-12">
+          {{ heatmapChart() }}
+        </div>
+
+        <!-- Radial Bar Chart -->
+        <div class="col-md-6 col-12">
+          {{ radialBarChart() }}
+        </div>
+
+        <!-- Radar Chart -->
+        <div class="col-md-6 col-12">
+          {{ radarChart() }}
+        </div>
+
+        <!-- Donut Chart -->
+        <div class="col-md-6 col-12">
+          {{ donutChart() }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block page_js %}
+    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="../assets/js/charts-apex.js"></script>
+{% endblock %}

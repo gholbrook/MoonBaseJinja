@@ -1,0 +1,32 @@
+{% macro donutChart() %}
+<div class="card h-100">
+    <div class="card-header d-flex align-items-center justify-content-between pb-0">
+      <div class="card-title mb-0">
+        <h5 class="m-0 me-2">Expense Ratio</h5>
+        <small class="text-muted">Spending on various categories</small>
+      </div>
+      <div class="d-none d-sm-flex dropdown">
+        <button
+          class="btn btn-sm btn-outline-primary dropdown-toggle"
+          type="button"
+          id="donutDropdown"
+          data-bs-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Today
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="donutDropdown">
+          <a class="dropdown-item" href="javascript:void(0);">Yesterday</a>
+          <a class="dropdown-item" href="javascript:void(0);">Last 7 Days</a>
+          <a class="dropdown-item" href="javascript:void(0);">Last 30 Days</a>
+          <a class="dropdown-item" href="javascript:void(0);">Current Month</a>
+          <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div id="donutChart"></div>
+    </div>
+  </div>
+{% endmacro %}
