@@ -5,16 +5,6 @@
 {% endblock %}
 
 {% block content %}
-    <style>
-      .table > thead > tr > th {
-        font-size: 0.95rem !important;
-        font-weight: 700 !important;
-        letter-spacing: 1px;
-      }
-      .table > thead {
-        border-bottom: 2px solid #bbb !important;
-      }
-    </style>
     <!-- User Stats Cards -->
     <div class="row g-4 mb-4">
       <div class="col-sm-6 col-xl-3">
@@ -106,442 +96,143 @@
 
     <!-- Basic Table -->
     <div class="card">
-      <div class="table-responsive text-nowrap">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>User</th>
-              <th>Role</th>
-              <th>Plan</th>
-              <th>Billing</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody class="table-border-bottom-0">
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar avatar-sm me-3">
-                    <img src="../assets/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
-                  </div>
-                  <div>
-                    <span class="fw-semibold">Galen Slixby</span>
-                    <br /><small class="text-muted">gslixby0@abc.net.au</small>
-                  </div>
+    <h5 class="card-header">Agents</h5>
+    <div class="table-responsive text-nowrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Agent</th>
+            <th>Model</th>
+            <th>Users</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="table-border-bottom-0">
+          <tr data-href="/agent/1/profile">
+            <td><i class="icon-base bx bxl-angular icon-md text-danger me-4"></i> <span>Angular Project</span></td>
+            <td>Albert Cook</td>
+            <td>
+              <ul class="list-unstyled m-0 avatar-group d-flex align-items-center">
+                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Lilian Fuller" data-bs-original-title="Lilian Fuller">
+                  <img src="/assets/img/avatars/5.png" alt="Avatar" class="rounded-circle">
+                </li>
+                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Sophia Wilkerson" data-bs-original-title="Sophia Wilkerson">
+                  <img src="/assets/img/avatars/6.png" alt="Avatar" class="rounded-circle">
+                </li>
+                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Christina Parker" data-bs-original-title="Christina Parker">
+                  <img src="/assets/img/avatars/7.png" alt="Avatar" class="rounded-circle">
+                </li>
+              </ul>
+            </td>
+            <td><span class="badge bg-label-primary me-1">Active</span></td>
+            <td>
+              <div class="dropdown">
+                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="icon-base bx bx-dots-vertical-rounded"></i></button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="javascript:void(0);"><i class="icon-base bx bx-edit-alt me-1"></i> Edit</a>
+                  <a class="dropdown-item" href="javascript:void(0);"><i class="icon-base bx bx-trash me-1"></i> Delete</a>
                 </div>
-              </td>
-              <td><span class="d-flex align-items-center"><i class="bx bx-edit text-info me-2"></i> Editor</span></td>
-              <td><span class="fw-semibold">Enterprise</span></td>
-              <td>Manual - Loss</td>
-              <td><span class="badge bg-label-secondary me-1">Inactive</span></td>
-              <td>
-                <div class="dropdown">
-                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                  </div>
+              </div>
+            </td>
+          </tr>
+          <tr data-href="/agent/2/profile">
+            <td><i class="icon-base bx bxl-react icon-md text-info me-4"></i> <span>React Project</span></td>
+            <td>Barry Hunter</td>
+            <td>
+              <ul class="list-unstyled m-0 avatar-group d-flex align-items-center">
+                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Lilian Fuller" data-bs-original-title="Lilian Fuller">
+                  <img src="/assets/img/avatars/5.png" alt="Avatar" class="rounded-circle">
+                </li>
+                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Sophia Wilkerson" data-bs-original-title="Sophia Wilkerson">
+                  <img src="/assets/img/avatars/6.png" alt="Avatar" class="rounded-circle">
+                </li>
+                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Christina Parker" data-bs-original-title="Christina Parker">
+                  <img src="/assets/img/avatars/7.png" alt="Avatar" class="rounded-circle">
+                </li>
+              </ul>
+            </td>
+            <td><span class="badge bg-label-success me-1">Completed</span></td>
+            <td>
+              <div class="dropdown">
+                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="icon-base bx bx-dots-vertical-rounded"></i></button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="javascript:void(0);"><i class="icon-base bx bx-edit-alt me-2"></i> Edit</a>
+                  <a class="dropdown-item" href="javascript:void(0);"><i class="icon-base bx bx-trash me-2"></i> Delete</a>
                 </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar avatar-sm me-3">
-                    <span class="avatar-initial rounded-circle bg-label-warning">HR</span>
-                  </div>
-                  <div>
-                    <span class="fw-semibold">Halsey Redmore</span>
-                    <br /><small class="text-muted">hredmore1@imgur.com</small>
-                  </div>
+              </div>
+            </td>
+          </tr>
+          <tr data-href="/agent/3/profile">
+            <td><i class="icon-base bx bxl-vuejs icon-md text-success me-4"></i> <span>VueJs Project</span></td>
+            <td>Trevor Baker</td>
+            <td>
+              <ul class="list-unstyled m-0 avatar-group d-flex align-items-center">
+                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Lilian Fuller" data-bs-original-title="Lilian Fuller">
+                  <img src="/assets/img/avatars/5.png" alt="Avatar" class="rounded-circle">
+                </li>
+                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Sophia Wilkerson" data-bs-original-title="Sophia Wilkerson">
+                  <img src="/assets/img/avatars/6.png" alt="Avatar" class="rounded-circle">
+                </li>
+                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Christina Parker" data-bs-original-title="Christina Parker">
+                  <img src="/assets/img/avatars/7.png" alt="Avatar" class="rounded-circle">
+                </li>
+              </ul>
+            </td>
+            <td><span class="badge bg-label-info me-1">Scheduled</span></td>
+            <td>
+              <div class="dropdown">
+                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="icon-base bx bx-dots-vertical-rounded"></i></button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="javascript:void(0);"><i class="icon-base bx bx-edit-alt me-2"></i> Edit</a>
+                  <a class="dropdown-item" href="javascript:void(0);"><i class="icon-base bx bx-trash me-2"></i> Delete</a>
                 </div>
-              </td>
-              <td><span class="d-flex align-items-center"><i class="bx bx-cog text-warning me-2"></i> Author</span></td>
-              <td><span class="fw-semibold">Team</span></td>
-              <td>Auto Debit</td>
-              <td><span class="badge bg-label-warning me-1">Pending</span></td>
-              <td>
-                <div class="dropdown">
-                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                  </div>
+              </div>
+            </td>
+          </tr>
+          <tr data-href="/agent/4/profile">
+            <td><i class="icon-base bx bxl-bootstrap icon-md text-primary me-4"></i> <span>Bootstrap Project</span></td>
+            <td>Jerry Milton</td>
+            <td>
+              <ul class="list-unstyled m-0 avatar-group d-flex align-items-center">
+                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Lilian Fuller" data-bs-original-title="Lilian Fuller">
+                  <img src="/assets/img/avatars/5.png" alt="Avatar" class="rounded-circle">
+                </li>
+                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Sophia Wilkerson" data-bs-original-title="Sophia Wilkerson">
+                  <img src="/assets/img/avatars/6.png" alt="Avatar" class="rounded-circle">
+                </li>
+                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Christina Parker" data-bs-original-title="Christina Parker">
+                  <img src="/assets/img/avatars/7.png" alt="Avatar" class="rounded-circle">
+                </li>
+              </ul>
+            </td>
+            <td><span class="badge bg-label-warning me-1">Pending</span></td>
+            <td>
+              <div class="dropdown">
+                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="icon-base bx bx-dots-vertical-rounded"></i></button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="javascript:void(0);"><i class="icon-base bx bx-edit-alt me-2"></i> Edit</a>
+                  <a class="dropdown-item" href="javascript:void(0);"><i class="icon-base bx bx-trash me-2"></i> Delete</a>
                 </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar avatar-sm me-3">
-                    <img src="../assets/img/avatars/3.png" alt="Avatar" class="rounded-circle" />
-                  </div>
-                  <div>
-                    <span class="fw-semibold">Marjory Sicely</span>
-                    <br /><small class="text-muted">msicely2@who.int</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="d-flex align-items-center"><i class="bx bx-pie-chart-alt text-success me-2"></i> Maintainer</span></td>
-              <td><span class="fw-semibold">Enterprise</span></td>
-              <td>Manual - Cash</td>
-              <td><span class="badge bg-label-success me-1">Active</span></td>
-              <td>
-                <div class="dropdown">
-                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar avatar-sm me-3">
-                    <span class="avatar-initial rounded-circle bg-label-info">CR</span>
-                  </div>
-                  <div>
-                    <span class="fw-semibold">Cyrill Risby</span>
-                    <br /><small class="text-muted">crisby3@wordpress.com</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="d-flex align-items-center"><i class="bx bx-pie-chart-alt text-success me-2"></i> Maintainer</span></td>
-              <td><span class="fw-semibold">Team</span></td>
-              <td>Manual - Paypal</td>
-              <td><span class="badge bg-label-secondary me-1">Inactive</span></td>
-              <td>
-                <div class="dropdown">
-                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar avatar-sm me-3">
-                    <span class="avatar-initial rounded-circle bg-label-primary">MH</span>
-                  </div>
-                  <div>
-                    <span class="fw-semibold">Maggy Hurrell</span>
-                    <br /><small class="text-muted">mhurrell4@yahoo.co.jp</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="d-flex align-items-center"><i class="bx bx-user text-primary me-2"></i> Subscriber</span></td>
-              <td><span class="fw-semibold">Enterprise</span></td>
-              <td>Manual - Cash</td>
-              <td><span class="badge bg-label-warning me-1">Pending</span></td>
-              <td>
-                <div class="dropdown">
-                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar avatar-sm me-3">
-                    <img src="../assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
-                  </div>
-                  <div>
-                    <span class="fw-semibold">Silvain Haldarth</span>
-                    <br /><small class="text-muted">shaldarth5@shinystat.com</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="d-flex align-items-center"><i class="bx bx-cog text-warning me-2"></i> Author</span></td>
-              <td><span class="fw-semibold">Company</span></td>
-              <td>Manual - Loss</td>
-              <td><span class="badge bg-label-success me-1">Active</span></td>
-              <td>
-                <div class="dropdown">
-                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar avatar-sm me-3">
-                    <span class="avatar-initial rounded-circle bg-label-danger">BG</span>
-                  </div>
-                  <div>
-                    <span class="fw-semibold">Breena Gallemore</span>
-                    <br /><small class="text-muted">bgallemore6@dion.ne.jp</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="d-flex align-items-center"><i class="bx bx-user text-primary me-2"></i> Subscriber</span></td>
-              <td><span class="fw-semibold">Enterprise</span></td>
-              <td>Auto Debit</td>
-              <td><span class="badge bg-label-warning me-1">Pending</span></td>
-              <td>
-                <div class="dropdown">
-                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar avatar-sm me-3">
-                    <img src="../assets/img/avatars/4.png" alt="Avatar" class="rounded-circle" />
-                  </div>
-                  <div>
-                    <span class="fw-semibold">Kathryne Lissimore</span>
-                    <br /><small class="text-muted">klissimore7@dell.com</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="d-flex align-items-center"><i class="bx bx-cog text-warning me-2"></i> Author</span></td>
-              <td><span class="fw-semibold">Basic</span></td>
-              <td>Manual - Cash</td>
-              <td><span class="badge bg-label-warning me-1">Pending</span></td>
-              <td>
-                <div class="dropdown">
-                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar avatar-sm me-3">
-                    <span class="avatar-initial rounded-circle bg-label-success">FS</span>
-                  </div>
-                  <div>
-                    <span class="fw-semibold">Franz Scotfurth</span>
-                    <br /><small class="text-muted">fscotfurth8@dailymotion.com</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="d-flex align-items-center"><i class="bx bx-pie-chart-alt text-success me-2"></i> Maintainer</span></td>
-              <td><span class="fw-semibold">Team</span></td>
-              <td>Auto Debit</td>
-              <td><span class="badge bg-label-success me-1">Active</span></td>
-              <td>
-                <div class="dropdown">
-                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar avatar-sm me-3">
-                    <img src="../assets/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
-                  </div>
-                  <div>
-                    <span class="fw-semibold">Jillene Bellany</span>
-                    <br /><small class="text-muted">jbellany9@kickstarter.com</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="d-flex align-items-center"><i class="bx bx-pie-chart-alt text-success me-2"></i> Maintainer</span></td>
-              <td><span class="fw-semibold">Company</span></td>
-              <td>Manual - Cash</td>
-              <td><span class="badge bg-label-secondary me-1">Inactive</span></td>
-              <td>
-                <div class="dropdown">
-                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar avatar-sm me-3">
-                    <span class="avatar-initial rounded-circle bg-label-dark">JW</span>
-                  </div>
-                  <div>
-                    <span class="fw-semibold">Jonah Wharlton</span>
-                    <br /><small class="text-muted">jwharltona@oakley.com</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="d-flex align-items-center"><i class="bx bx-user text-primary me-2"></i> Subscriber</span></td>
-              <td><span class="fw-semibold">Team</span></td>
-              <td>Auto Debit</td>
-              <td><span class="badge bg-label-success me-1">Active</span></td>
-              <td>
-                <div class="dropdown">
-                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar avatar-sm me-3">
-                    <img src="../assets/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
-                  </div>
-                  <div>
-                    <span class="fw-semibold">Seth Hallam</span>
-                    <br /><small class="text-muted">shallamb@hugedomains.com</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="d-flex align-items-center"><i class="bx bx-user text-primary me-2"></i> Subscriber</span></td>
-              <td><span class="fw-semibold">Team</span></td>
-              <td>Manual - Paypal</td>
-              <td><span class="badge bg-label-warning me-1">Pending</span></td>
-              <td>
-                <div class="dropdown">
-                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar avatar-sm me-3">
-                    <span class="avatar-initial rounded-circle bg-label-primary">AI</span>
-                  </div>
-                  <div>
-                    <span class="fw-semibold">Ailin Sidaway</span>
-                    <br /><small class="text-muted">asidawayd@ibm.com</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="d-flex align-items-center"><i class="bx bx-crown text-danger me-2"></i> Admin</span></td>
-              <td><span class="fw-semibold">Enterprise</span></td>
-              <td>Manual - Paypal</td>
-              <td><span class="badge bg-label-success me-1">Active</span></td>
-              <td>
-                <div class="dropdown">
-                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar avatar-sm me-3">
-                    <span class="avatar-initial rounded-circle bg-label-secondary">OW</span>
-                  </div>
-                  <div>
-                    <span class="fw-semibold">Opaline Waddup</span>
-                    <br /><small class="text-muted">owaddupe@imgur.com</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="d-flex align-items-center"><i class="bx bx-edit text-info me-2"></i> Editor</span></td>
-              <td><span class="fw-semibold">Basic</span></td>
-              <td>Manual - Cash</td>
-              <td><span class="badge bg-label-warning me-1">Pending</span></td>
-              <td>
-                <div class="dropdown">
-                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar avatar-sm me-3">
-                    <img src="../assets/img/avatars/2.png" alt="Avatar" class="rounded-circle" />
-                  </div>
-                  <div>
-                    <span class="fw-semibold">Yoko Pottie</span>
-                    <br /><small class="text-muted">ypottiec@privacy.gov.au</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="d-flex align-items-center"><i class="bx bx-user text-primary me-2"></i> Subscriber</span></td>
-              <td><span class="fw-semibold">Basic</span></td>
-              <td>Auto Debit</td>
-              <td><span class="badge bg-label-secondary me-1">Inactive</span></td>
-              <td>
-                <div class="dropdown">
-                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
     <!-- /Basic Table -->
+
+    <style>
+      tr[data-href] { cursor: pointer; }
+      tr[data-href]:hover td { background-color: rgba(67, 89, 113, 0.04); }
+    </style>
+    <script>
+      document.querySelectorAll('tr[data-href]').forEach(row => {
+        row.addEventListener('click', e => {
+          if (e.target.closest('.dropdown')) return;
+          window.location = row.dataset.href;
+        });
+      });
+    </script>
 {% endblock %}

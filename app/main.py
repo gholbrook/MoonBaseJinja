@@ -16,6 +16,10 @@ async def charts_apex(request: Request):
 async def charts_apex(request: Request):
     return templates.TemplateResponse(request, "pages/agents.html")
 
+@app.get("/agent/{id}/profile")
+async def agent_profile(request: Request, id: str):
+    return templates.TemplateResponse(request, "pages/agent.html", {"agent_id": id})
+
 
 @app.get("/")
 async def dashboard(request: Request):

@@ -5,7 +5,8 @@
       "Bash(grep:*)",
       "WebFetch(domain:demos.themeselection.com)",
       "Bash(find C:/Users/utahb/PycharmProjects/MoonBaseJinja/app/static/assets -name *datatable* -o -name *datatables*)",
-      "Bash(tr '}' '\\\\n')"
+      "Bash(tr '}' '\\\\n')",
+      "Bash(python3:*)"
     ]
   }
 }
