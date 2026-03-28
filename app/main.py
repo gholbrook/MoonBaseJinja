@@ -12,8 +12,12 @@ templates = Jinja2Templates(directory="templates")
 async def charts_apex(request: Request):
     return templates.TemplateResponse(request, "pages/charts-apex.html")
 
+@app.get("/chats")
+async def chats(request: Request):
+    return templates.TemplateResponse(request, "pages/chats.html")
+
 @app.get("/agents")
-async def charts_apex(request: Request):
+async def agents(request: Request):
     return templates.TemplateResponse(request, "pages/agents.html")
 
 @app.get("/agent/{id}/overview")
