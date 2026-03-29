@@ -36,6 +36,10 @@ async def agent_activity(request: Request, id: str):
 async def agent_tools(request: Request, id: str):
     return templates.TemplateResponse(request, "pages/agent_tools.html", {"agent_id": id})
 
+@app.get("/policies")
+async def policies(request: Request):
+    return templates.TemplateResponse(request, "pages/policies.html")
+
 
 @app.get("/")
 async def dashboard(request: Request):
