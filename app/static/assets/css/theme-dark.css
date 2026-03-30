@@ -23,11 +23,16 @@
 }
 
 /* Cards */
-.dark-style .card,
+.dark-style .card {
+  background-color: #2b2c40 !important;
+  color: #a3a4cc;
+  border-color: #434368;
+}
+
 .dark-style .card-header,
 .dark-style .card-body,
 .dark-style .card-footer {
-  background-color: #2b2c40 !important;
+  background-color: transparent !important;
   color: #a3a4cc;
   border-color: #434368;
 }
